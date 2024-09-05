@@ -5,30 +5,35 @@
   scroll-behavior: smooth;
   font-family: "Space Grotesk", sans-serif;
   text-decoration: none;
+  list-style-type: none;
 }
 
 :root {
   --fontColor: black;
   --h1FontSize: 2rem;
+  --primaryColor: #b9ff66;
+  --prePrimaryColor: #f3f3f3;
 }
 
 .main-container {
-  width: 100vw;
   height: 100vh;
 }
 .main {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  width: 80%;
+  margin: 0 auto;
+  /* background-color: crimson; */
 }
 nav {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   /* background-color: blueviolet; */
-  height: 75px;
+  height: 100px;
 }
 
 .links {
@@ -43,8 +48,7 @@ nav {
   list-style: none;
 }
 .quote {
-  width: 200px;
-  height: 50px;
+  padding: 15px 20px;
   border-radius: 15px;
   align-items: center;
 }
@@ -56,32 +60,32 @@ nav {
   width: 100%;
   /* background-color: brown; */
   display: flex;
-  justify-content: center;
+  /* justify-content: space-evenly; */
 }
 .left-landing {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 40%;
+  width: 50%;
   /* background-color: aquamarine; */
   gap: 30px;
 }
 
 .navigating-heading {
-  width: 80%;
+  width: 100%;
   font-size: var(--h1FontSize);
   /* background-color: blue; */
+  display: flex;
+  justify-content: flex-start;
 }
 .digital-marketing {
-  width: 80%;
+  width: 100%;
   /* background-color: chartreuse; */
 }
 .consultation {
   display: flex;
   justify-content: flex-start;
   align-items: start;
-  width: 80%;
+  width: 100%;
 }
 .consultation-btn {
   width: 50%;
@@ -91,18 +95,105 @@ nav {
 }
 .right-landing {
   display: flex;
-  width: 40%;
-  justify-content: center;
+  width: 50%;
+  justify-content: right;
   align-items: center;
   /* background-color: yellow; */
 }
 .companies {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 900px) {
+.parent-services {
+  display: flex;
+  width: 100%;
+  /* background-color: yellow; */
+}
+
+.services {
+  width: 18%;
+  /* background-color: darkgreen; */
+  display: flex;
+  align-items: center;
+}
+.service-btn {
+  width: 85%;
+  height: 100%;
+  background-color: var(--primaryColor);
+  border-color: transparent;
+  font-size: var(--h1FontSize);
+}
+.services-para {
+  width: 55%;
+  /* background-color: pink; */
+}
+.cards-row-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card1 {
+  width: 47%;
+  background-color: var(--prePrimaryColor);
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.eng-opt {
+  width: 45%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card2 {
+  width: 47%;
+  background-color: var(--primaryColor);
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.ppc {
+  width: 45%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.parent-working {
+  display: flex;
+  width: 100%;
+  /* background-color: yellow; */
+}
+
+.working {
+  width: 38%;
+  /* background-color: darkgreen; */
+  display: flex;
+  align-items: center;
+}
+.working-btn {
+  width: 85%;
+  height: 100%;
+  background-color: var(--primaryColor);
+  border-color: transparent;
+  font-size: var(--h1FontSize);
+}
+.working-para {
+  width: 25%;
+  /* background-color: pink; */
+}
+
+@media screen and (max-width: 1024px) {
   .links {
     display: none;
   }
@@ -113,7 +204,7 @@ nav {
     display: flex;
   }
   .navigating-heading {
-    font-size: 1.5rem;
+    font-size: 20px;
   }
   .header {
     flex-direction: column;
@@ -127,9 +218,63 @@ nav {
   }
   .right-landing {
     width: 100%;
+    justify-content: center;
   }
   .mike-img > img {
     width: 100%;
     height: auto;
+  }
+  .companies > img {
+    width: 86px;
+  }
+  .parent-services {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .services {
+    width: 100%;
+    justify-content: center;
+  }
+  .services-para {
+    width: 100%;
+    text-align: center;
+  }
+  .parent-working {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .working {
+    width: 100%;
+    justify-content: center;
+  }
+  .working-para {
+    width: 100%;
+    text-align: center;
+  }
+  .cards-row-1 {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .card1 {
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+  }
+  .eng-opt {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+  .card2 {
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+  }
+  .ppc {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
   }
 }
